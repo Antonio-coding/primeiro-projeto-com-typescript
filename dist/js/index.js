@@ -21,3 +21,26 @@ console.log(myNumbers.length);
 console.log(firstName.toUpperCase());
 myNumbers.push(5);
 console.log(myNumbers);
+// tuplas -> tuple
+let myTuple;
+myTuple = [5, 'teste', ['a', 'b']];
+//myTuple = [true, false, true]
+//object literals -> {prop : value}
+const user = {
+    name: 'antonio',
+    age: 48,
+};
+console.log(user);
+console.log(user.name);
+//user.job = "Programador" não consegue atribuir porque eles ja foram definidas pela tipagem 
+//any
+let a = 0;
+a = 'teste';
+a = true;
+a = [];
+// union type
+let id = "10";
+id = 200;
+const userId = 10;
+const productId = "000011";
+const shirId = 1231546;
