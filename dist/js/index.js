@@ -44,3 +44,57 @@ id = 200;
 const userId = 10;
 const productId = "000011";
 const shirId = 1231546;
+// enum 
+// tamanho de roupas (size: medio , size: pequeno)
+var Size;
+(function (Size) {
+    Size["P"] = "Pequeno";
+    Size["M"] = "Medio";
+    Size["G"] = "Grande";
+})(Size || (Size = {}));
+const camisa = {
+    name: "Camisa gola V",
+    size: Size.M,
+};
+console.log(camisa);
+// literal Types
+//let teste : "algumvalor";
+// teste = "outrovalor";
+let teste;
+teste = "autenticado";
+teste = null;
+// funçoes
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(12, 45));
+// console.log (sum("12",true)) 
+function sayHelloTo(name) {
+    return `Hello ${name}`;
+}
+console.log(sayHelloTo("Antonio"));
+function logger(msg) {
+    console.log(msg);
+}
+logger('Teste!');
+function greeting(name, greet) {
+    if (greet) {
+        console.log(`Olá ${greet} ${name}`);
+        return;
+    }
+    console.log(`Olá ${name}`);
+}
+greeting('jose');
+greeting('jose', 'Sir');
+function sumNumbers(nums) {
+    return nums.n1 + nums.n2;
+}
+console.log(sumNumbers({ n1: 1, n2: 2 }));
+function multiplyNumbers(nums) {
+    return nums.n1 * nums.n2;
+}
+const someNumbers = {
+    n1: 14,
+    n2: 1012120,
+};
+console.log(multiplyNumbers(someNumbers));
