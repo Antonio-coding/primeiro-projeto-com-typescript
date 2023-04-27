@@ -61,8 +61,80 @@ let id: string | number = "10"
 
   // type alias 
 
-  type myIdType = number | string
+  type myIdType = number | string  
 
   const userId: myIdType = 10 
   const productId: myIdType = "000011"
   const shirId: myIdType = 1231546
+
+  // enum 
+  // tamanho de roupas (size: medio , size: pequeno)
+  enum Size {
+    P = "Pequeno",
+    M = "Medio",
+    G = "Grande"
+  }
+
+  const camisa = {
+    name: "Camisa gola V",
+    size: Size.M,
+  }
+
+  console.log( camisa);
+
+  // literal Types
+
+  //let teste : "algumvalor";
+  // teste = "outrovalor";
+   let teste: "autenticado" | null;
+   teste = "autenticado";
+   teste = null;
+   
+   // funçoes
+   function sum( a: number, b: number) {
+    return a+b;
+   }
+   console.log ( sum(12,45));
+   // console.log (sum("12",true)) 
+
+   function sayHelloTo(name: string): string {
+    return `Hello ${name}`;
+   }
+
+   console.log(sayHelloTo("Antonio"));
+
+   function logger(msg:string):void{
+    console.log(msg);
+   }
+logger('Teste!')
+
+function greeting (name: string, greet?: string): void {
+   if (greet) {
+    console.log(`Olá ${greet} ${name}` );
+    return;
+   }
+   console.log(`Olá ${name}`);
+}
+
+greeting('jose');
+greeting('jose', 'Sir');
+
+//interfaces
+interface MathFunctionParams {
+    n1: number,
+    n2: number;
+}
+function sumNumbers (nums: MathFunctionParams){
+    return nums.n1 + nums.n2;
+}
+console.log(sumNumbers({n1:1, n2:2}));
+
+function multiplyNumbers(nums: MathFunctionParams)
+{
+    return nums.n1 * nums.n2;
+}
+ const someNumbers: MathFunctionParams = {
+    n1: 14, 
+    n2: 1012120,
+ };
+ console.log(multiplyNumbers(someNumbers));
